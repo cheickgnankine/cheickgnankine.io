@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<meta property="og:url" content="https://ahmed-thydjane.github.io/" />
+<meta property="og:type" content="website" />
+<meta property="og:title"         content="DITES MOI CE QUE VOUS AIMEZ" />
+<meta property="og:description"   content="Click pour faire ton choix" />
+<meta property="og:image"         content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+</head>
+<!--EF-->
+</head>
+<body>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v11.0&appId=532997294498180&autoLogAppEvents=1" nonce="U4safhxI">
+    </script>
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '532997294498180',
+            xfbml      : true,
+            version    : 'v11.0'
+          });
+          FB.AppEvents.logPageView();
+        };
+      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+  <h2>Bonjourr</h2>
+    
+  
+</div>
+    <div class="fb-share-button" data-href="https://web.facebook.com/thydj.ge.1" data-layout="button_count" data-size="large">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweb.facebook.com%2Fthydj.ge.1&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partager à vous amis</a></div>
+
+  <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+<script>
+
+  function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+    console.log('statusChangeCallback');
+    console.log(response);                   // The current login status of the person.
+    if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+      testAPI();  
+    } else {                                 // Not logged into your webpage or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this webpage.';
+    }
+  }
+
+
+  function checkLoginState() {               // Called when a person is finished with the Login Button.
+    FB.getLoginStatus(function(response) {   // See the onlogin handler
+      statusChangeCallback(response);
+    });
+  }
+
+
+    FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
+      statusChangeCallback(response);        // Returns the login status.
+    });
+  };
+ 
+  function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+
+</script>
+
+
+<!-- The JS SDK Login Button -->
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
+
+<!-- Load the JS SDK asynchronously -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</body>
+</html>
